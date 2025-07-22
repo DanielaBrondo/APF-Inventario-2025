@@ -29,7 +29,7 @@
   </label>
 
   <label>Ingresa la cantidad Auditada:
-    <input type="number" id="numero2" placeholder="Ej. 104" />
+    <input type="number" id="numero2" placeholder="Ej. 154" />
   </label>
 
   <button onclick="calcular()">Calcular</button>
