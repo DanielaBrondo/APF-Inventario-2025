@@ -59,7 +59,7 @@
         mensaje.innerText = "Cantidad dentro de tolerancia, no debemos hacer ningun cambio 🙂";
         mensaje.className = "dentro";
       } else {
-        mensaje.innerText = "Cantidad fuera de tolerancia, el TAG está equivocado";
+        mensaje.innerText = "Cantidad fuera de tolerancia, el TAG está equivocado 😞";
         mensaje.className = "fuera";
       }
     }
