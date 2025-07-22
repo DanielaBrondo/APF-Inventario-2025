@@ -28,7 +28,7 @@
 </head>
 <body>
   <h3 style="color: green; text-align: center;">Cálculo de Tolerancia ±5%</h3>
-  <h4 style=" text-align: center;">Método de conteo en Béscula o Reel Counter</h4>
+  <h4 style=" text-align: center;">Método de conteo en Báscula o Reel Counter</h4>
   <label>Ingresa la cantidad del TAG:
     <input type="number" id="numero1" placeholder="Ej. 100" />
   </label>
