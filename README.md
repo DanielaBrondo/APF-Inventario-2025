@@ -1,7 +1,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Calculo de Tolerancia ±5% <br> OUTDOOR</title>
+  <title> Calculo de Tolerancia ±5% </title>
+  <h1 style="color: green; text-align: center;">Outdoor</h1>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body { font-family: sans-serif; padding: 20px; max-width: 400px; margin: auto; }
