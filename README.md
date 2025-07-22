@@ -1,27 +1,69 @@
+<!DOCTYPE html>
 <html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Calculo de Tolerancia ±5%</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 400px; margin: auto; }
+    input, button { width: 100%; padding: 10px; margin-top: 10px; font-size: 16px; }
+    p { font-size: 18px; margin-top: 20px; }
+    #mensaje {
+      font-weight: bold;
+      margin-top: 15px;
+      font-size: 18px;
+    }
+    .dentro {
+      color: green;
+    }
+    .fuera {
+      color: red;
+    }
+  </style>
+</head>
 <body>
- <h2 style="color: green;">Calculo de Tolerancia ±5%</h2>
+  <h2 style="color: green;">Calculadora de Tolerancia ±5%</h2>
+
   <label>Ingresa la cantidad del TAG:
-    <input type="number" id="numero" placeholder="Ej. 100" />
+    <input type="number" id="numero1" placeholder="Ej. 100" />
   </label>
+
+  <label>Ingresa la cantidad Auditada:
+    <input type="number" id="numero2" placeholder="Ej. 104" />
+  </label>
+
   <button onclick="calcular()">Calcular</button>
+
   <p id="resultado"></p>
+  <p id="mensaje"></p>
 
   <script>
     function calcular() {
-      const n = parseFloat(document.getElementById('numero').value);
-      if (isNaN(n)) {
-        document.getElementById('resultado').innerText = "Por favor, ingresa un número válido.";
+      const n1 = parseFloat(document.getElementById('numero1').value);
+      const n2 = parseFloat(document.getElementById('numero2').value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById('resultado').innerText = "Por favor, ingresa números válidos.";
+        document.getElementById('mensaje').innerText = "";
         return;
       }
-      const tolerancia = n * 0.05;
-      const minimo = parseInt(n - tolerancia);
-      const maximo = Math.round(n + tolerancia);
+
+      const tolerancia = n1 * 0.05;
+      const minimo = Math.round(n1 - tolerancia);
+      const maximo = Math.round(n1 + tolerancia);
+
       document.getElementById('resultado').innerHTML = 
-        `Valor Mínimo: ${minimo} <br> Valor Máximo: ${maximo}`;
+        `Valor Mínimo: ${minimo} <br> Valor Máximo: ${maximo} <br>`;
+
+      const mensaje = document.getElementById('mensaje');
+      if (n2 >= minimo && n2 <= maximo) {
+        mensaje.innerText = "Número dentro de tolerancia";
+        mensaje.className = "dentro";
+      } else {
+        mensaje.innerText = "Número fuera de tolerancia";
+        mensaje.className = "fuera";
+      }
     }
   </script>
-  <p><strong style="color: green;">Si la cantidad de nuestra auditoria esta dentro de estos dos numeros, o es igual a alguno de ellos,no debemos hacer ningun cambio 🙂</p>
-  <p><strong style="color: red;">Si la cantidad de nuestra auditoria esta dera de este rango, el TAG está equivocado </p>
 </body>
 </html>
