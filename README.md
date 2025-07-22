@@ -21,7 +21,7 @@
   </style>
 </head>
 <body>
-  <h2 style="color: green;">Calculadora de Tolerancia ±5%</h2>
+  <h2 style="color: green;">Calculo de Tolerancia ±5%</h2>
 
   <label>Ingresa la cantidad del TAG:
     <input type="number" id="numero1" placeholder="Ej. 100" />
