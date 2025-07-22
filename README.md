@@ -1,7 +1,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title> Calculo de Tolerancia ±5% </title>
+  <title style="text-align: center;"> Calculo de Tolerancia ±5% </title>
   <h2 style="color: green; text-align: center;">Outdoor</h2>
   <h4 style="color: green; text-align: center;">Metodo de conteo en Bascula o Reel Counter</h4>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
