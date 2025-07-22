@@ -1,7 +1,6 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title style="text-align: center;"> Calculo de Tolerancia ±5% </title>
   <h2 style="color: green; text-align: center;">Outdoor</h2>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +22,7 @@
   </style>
 </head>
 <body>
-  <h2 style="color: green;">Calculo de Tolerancia ±5%</h2>
+  <h2 style="color: green; style="text-align: center;">Calculo de Tolerancia ±5%</h2>
   <h4 style=" text-align: center;">Metodo de conteo en Bascula o Reel Counter</h4>
   <label>Ingresa la cantidad del TAG:
     <input type="number" id="numero1" placeholder="Ej. 100" />
