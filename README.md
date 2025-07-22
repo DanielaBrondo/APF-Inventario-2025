@@ -12,6 +12,7 @@
       font-weight: bold;
       margin-top: 15px;
       font-size: 18px;
+      text-align: center;
     }
     .dentro {
       color: green;
