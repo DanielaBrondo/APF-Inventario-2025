@@ -19,11 +19,16 @@
     .fuera {
       color: red;
     }
+      input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   </style>
 </head>
 <body>
   <h3 style="color: green; text-align: center;">Cálculo de Tolerancia ±5%</h3>
-  <h4 style=" text-align: center;">Metodo de conteo en Bascula o Reel Counter</h4>
+  <h4 style=" text-align: center;">Método de conteo en Béscula o Reel Counter</h4>
   <label>Ingresa la cantidad del TAG:
     <input type="number" id="numero1" placeholder="Ej. 100" />
   </label>
