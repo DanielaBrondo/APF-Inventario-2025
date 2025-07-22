@@ -57,10 +57,10 @@
 
       const mensaje = document.getElementById('mensaje');
       if (n2 >= minimo && n2 <= maximo) {
-        mensaje.innerText = "Número dentro de tolerancia";
+        mensaje.innerText = "Cantidad dentro de tolerancia, no debemos hacer ningun cambio 🙂";
         mensaje.className = "dentro";
       } else {
-        mensaje.innerText = "Número fuera de tolerancia";
+        mensaje.innerText = "Cantidad fuera de tolerancia, el TAG está equivocado";
         mensaje.className = "fuera";
       }
     }
