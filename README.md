@@ -10,7 +10,7 @@
   </style>
 </head>
 <body>
-  <h2>Calculadora de Rango (±5%)</h2>
+ <h2 style="color: green;">Calculadora de Rango ±5%</h2>
   <label>Ingresa un número:
     <input type="number" id="numero" placeholder="Ej. 100" />
   </label>
@@ -27,7 +27,7 @@
       const tolerancia = n * 0.05;
       const minimo = Math.round(n - tolerancia);
       const maximo = Math.round(n + tolerancia);
-      document.getElementById('resultado').innerText = 
+      document.getElementById('resultado').innerHTML = 
         `Valor Mínimo: ${minimo.toFixed(2)} <br> Valor Máximo: ${maximo.toFixed(2)} <br> Si la cantidad del TAG esta dentro de estos dos numeros, o e sigual a alguno de ellos,no debemos hacer ningun cambio :)`;
     }
   </script>
