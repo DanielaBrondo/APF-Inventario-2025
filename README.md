@@ -1,7 +1,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Calculadora de Tolerancia ±5%</title>
+  <title>Inventario Fisico- Outdoor </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body { font-family: sans-serif; padding: 20px; max-width: 400px; margin: auto; }
@@ -10,7 +10,7 @@
   </style>
 </head>
 <body>
- <h2 style="color: green;">Calculadora de Rango ±5%</h2>
+ <h2 style="color: green;">Calculadora de Tolerancia ±5%</h2>
   <label>Ingresa un número:
     <input type="number" id="numero" placeholder="Ej. 100" />
   </label>
