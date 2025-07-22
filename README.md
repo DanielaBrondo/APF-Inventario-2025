@@ -22,7 +22,7 @@
   </style>
 </head>
 <body>
-  <h2 style="color: green; text-align: center;">Calculo de Tolerancia ±5%</h2>
+  <h3 style="color: #32CD32; text-align: center;">Calculo de Tolerancia ±5%</h3>
   <h4 style=" text-align: center;">Metodo de conteo en Bascula o Reel Counter</h4>
   <label>Ingresa la cantidad del TAG:
     <input type="number" id="numero1" placeholder="Ej. 100" />
