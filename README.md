@@ -18,8 +18,10 @@
       const minimo = parseInt(n - tolerancia);
       const maximo = Math.round(n + tolerancia);
       document.getElementById('resultado').innerHTML = 
-        `Valor Mínimo: ${minimo} <br> Valor Máximo: ${maximo} <br> Si la cantidad de nuestra auditoria esta dentro de estos dos numeros, o es igual a alguno de ellos,no debemos hacer ningun cambio 🙂`;
+        `Valor Mínimo: ${minimo} <br> Valor Máximo: ${maximo}`;
     }
   </script>
+  <p><strong style="color: green;">Si la cantidad de nuestra auditoria esta dentro de estos dos numeros, o es igual a alguno de ellos,no debemos hacer ningun cambio 🙂</p>
+  <p><strong style="color: red;">Si la cantidad de nuestra auditoria esta dera de este rango, el TAG está equivocado </p>
 </body>
 </html>
