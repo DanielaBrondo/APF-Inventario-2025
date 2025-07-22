@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +12,7 @@
 </head>
 <body>
  <h2 style="color: green;">Calculadora de Tolerancia ±5%</h2>
-  <label>Ingresa un número:
+  <label>Ingresa la cantidad del TAG:
     <input type="number" id="numero" placeholder="Ej. 100" />
   </label>
   <button onclick="calcular()">Calcular</button>
