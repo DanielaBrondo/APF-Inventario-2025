@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Conteo de cables en BIN</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h2>Conteo de cables en BIN</h2>
 
+  <input type="number" id="medida" placeholder="Ingresa la medida del cable (Últimos 3 dígitos del NP)" />
+  <input type="number" id="piezas" placeholder="Ingresa la cantidad de piezas que muestra la báscula" />
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+  <div id="mensajeFinal"></div>
+  <script>
+    function calcular() {
+      const medida = parseFloat(document.getElementById('medida').value);
+      const piezas = parseFloat(document.getElementById('piezas').value);
+      const mensajeFinal = document.getElementById('mensajeFinal');
+      if (isNaN(medida) || isNaN(piezas)) {
+        document.getElementById('resultado').textContent = "Por favor, ingresa números válidos.";
+        return;
+      }
+
+      const resultado = (medida * piezas) / 1000;
+      document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+       mensajeFinal.textContent = "Esta es la cantidad de cable en metros(UOM)";
+    }
+  </script>
+</body>
+</html>
