@@ -86,10 +86,10 @@
   <h2>Conteo de cables en BIN</h2>
 
   <label for="medida">Medida del cable (últimos 3 dígitos del NP):</label>
-  <input type="number" id="medida" placeholder="Ej. 254" />
+  <input type="number" id="medida" placeholder="Ej. 45" />
 
   <label for="piezas">Cantidad de piezas que muestra la báscula:</label>
-  <input type="number" id="piezas" placeholder="Ej. 620" />
+  <input type="number" id="piezas" placeholder="Ej. 1500" />
 
   <button onclick="calcular()">Calcular</button>
 
@@ -109,7 +109,7 @@
         return;
       }
 
-      const resultado = (medida * piezas) / 1000;
+      const resultado = math.round((medida * piezas) / 1000);
       resultadoDiv.textContent = `Resultado: ${resultado}`;
       mensajeFinal.textContent = "Esta es la cantidad de cable en metros (UOM).";
     }
