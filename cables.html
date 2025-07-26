@@ -22,22 +22,29 @@
       color: #444;
     }
 
-    input, button {
-      width: auto;
-      padding: 10px 20px;
+    .input-group {
+      text-align: center;
       margin-top: 10px;
+    }
+
+    input {
+      padding: 10px;
       font-size: 16px;
       border-radius: 6px;
       border: 1px solid #ccc;
+      margin-top: 5px;
+      width: 80%;
     }
 
     button {
+      padding: 10px 30px;
+      margin-top: 20px;
+      font-size: 16px;
       background-color: green;
       color: white;
       border: none;
+      border-radius: 6px;
       cursor: pointer;
-      
-      
     }
 
     button:hover {
@@ -70,18 +77,20 @@
   <h2>Conteo de cables en BIN</h2>
   <h4>Multiplicación de medida × cantidad / 1000</h4>
 
-  <label>Medida del cable (últimos 3 dígitos del NP):
+  <div class="input-group">
+    <label for="medida">Medida del cable (últimos 3 dígitos del NP):</label><br />
     <input type="number" id="medida" placeholder="Ej. 45" />
-  </label>
+  </div>
 
-  <label>Cantidad de piezas que muestra la báscula:
+  <div class="input-group">
+    <label for="piezas">Cantidad de piezas que muestra la báscula:</label><br />
     <input type="number" id="piezas" placeholder="Ej. 1500" />
-  </label>
+  </div>
 
   <div style="text-align: center;">
-  <button onclick="calcular()">Calcular</button>
+    <button onclick="calcular()">Calcular</button>
   </div>
-  
+
   <p id="resultado"></p>
   <p id="mensajeFinal"></p>
 
@@ -105,3 +114,4 @@
   </script>
 </body>
 </html>
+   
