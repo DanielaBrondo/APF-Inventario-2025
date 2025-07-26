@@ -23,7 +23,7 @@
     }
 
     input, button {
-      width: 100px;
+      width: 100%;
       padding: 10px;
       margin-top: 10px;
       font-size: 16px;
@@ -32,16 +32,14 @@
     }
 
     button {
-      background-color: green;
+      background-color: #007BFF;
       color: white;
       border: none;
       cursor: pointer;
-      
-      
     }
 
     button:hover {
-      background-color: #218838;
+      background-color: #0056b3;
     }
 
     #resultado {
@@ -71,16 +69,15 @@
   <h4>Multiplicación de medida × cantidad / 1000</h4>
 
   <label>Medida del cable (últimos 3 dígitos del NP):
-    <input type="number" id="medida" placeholder="Ej. 45" />
+    <input type="number" id="medida" placeholder="Ej. 254" />
   </label>
 
   <label>Cantidad de piezas que muestra la báscula:
-    <input type="number" id="piezas" placeholder="Ej. 1500" />
+    <input type="number" id="piezas" placeholder="Ej. 620" />
   </label>
 
   <button onclick="calcular()">Calcular</button>
 
-  
   <p id="resultado"></p>
   <p id="mensajeFinal"></p>
 
@@ -98,11 +95,9 @@
       }
 
       const resultado = (medida * piezas) / 1000;
-      resultadoDiv.textContent = Resultado: ${resultado};
+      resultadoDiv.textContent = `Resultado: ${resultado}`;
       mensajeFinal.textContent = "Esta es la cantidad de cable en metros (UOM).";
     }
   </script>
 </body>
 </html>
-</html>
-   
