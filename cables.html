@@ -36,7 +36,8 @@
       color: white;
       border: none;
       cursor: pointer;
-      margin: 20px auto;
+      
+      
     }
 
     button:hover {
@@ -70,15 +71,17 @@
   <h4>Multiplicación de medida × cantidad / 1000</h4>
 
   <label>Medida del cable (últimos 3 dígitos del NP):
-    <input type="number" id="medida" placeholder="Ej. 254" />
+    <input type="number" id="medida" placeholder="Ej. 45" />
   </label>
 
   <label>Cantidad de piezas que muestra la báscula:
-    <input type="number" id="piezas" placeholder="Ej. 620" />
+    <input type="number" id="piezas" placeholder="Ej. 1500" />
   </label>
 
+  <div style="text-align: center;">
   <button onclick="calcular()">Calcular</button>
-
+  </div>
+  
   <p id="resultado"></p>
   <p id="mensajeFinal"></p>
 
