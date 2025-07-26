@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>APF-Inventario Físico 2025</title>
   <style>
+    /* Reset margenes y paddings */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding-top: 0;
-      background-color:#f9f9f9;
+      background-color: #f9f9f9;
       margin: 0;
     }
 
     header {
-      width: 100vw;
-      height: 150px; 
-      background-image: url('fondo2.jpg'); 
+      width: 100vw; /* ancho completo de la ventana */
+      height: 150px;
+      background-image: url('fondo2.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      border-radius: 0 0 10px 10px;
       margin-bottom: 30px;
-      border-radius: 10px;
-      top: 0 ;
     }
-  @media (max-width: 600px) {
+
+    /* Más alto en móvil para que la imagen no quede tan chiquita */
+    @media (max-width: 600px) {
       header {
         height: 220px;
       }
     }
+
+    .contenedor {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     h1 {
       color: #333;
-      margin: 0 0 10px 0;
+      margin: 50px 0 10px 0;
     }
+
     h2 {
       color: #333;
       margin-top: 0;
     }
+
     .boton {
       display: inline-block;
       padding: 15px 30px;
@@ -59,15 +75,18 @@
 
   <header></header>
 
-  <h1>APF-Inventario Físico 2025</h1>
-  <h2>OUTDOOR</h2>
+  <div class="contenedor">
+    <h1>APF-Inventario Físico 2025📦</h1>
+    <h2>OUTDOOR</h2>
 
-  <button class="boton" onclick="window.location.href='tolerancia.html'">
-    ✖️➕Calcular Tolerancia ±5% 
-  </button>
+    <button class="boton" onclick="window.location.href='tolerancia.html'">
+      ✖️➕Calcular Tolerancia ±5% 
+    </button>
 
-  <button class="boton" onclick="window.location.href='cables.html'">
-    📏 Conteo de cables en bin
-  </button>
+    <button class="boton" onclick="window.location.href='cables.html'">
+      📏 Conteo de cables en bin
+    </button>
+  </div>
+
 </body>
 </html>
