@@ -5,63 +5,98 @@
   <title>Conteo de cables en BIN</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      max-width: 400px;
-      margin: 50px auto;
+      font-family: sans-serif;
       padding: 20px;
-      text-align: center;
-      background-color: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: auto;
+      background-color: #fff;
     }
+
+    h2 {
+      color: #50C878;
+      text-align: center;
+    }
+
+    h4 {
+      text-align: center;
+      color: #444;
+    }
+
     input, button {
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
+      padding: 10px;
+      margin-top: 10px;
       font-size: 16px;
       border-radius: 6px;
       border: 1px solid #ccc;
     }
+
     button {
       background-color: #007BFF;
       color: white;
       border: none;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #0056b3;
     }
+
     #resultado {
+      font-size: 18px;
       margin-top: 20px;
-      font-size: 20px;
       font-weight: bold;
+      text-align: center;
       color: #333;
+    }
+
+    #mensajeFinal {
+      margin-top: 10px;
+      font-size: 16px;
+      text-align: center;
+      color: #555;
+    }
+
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   </style>
 </head>
 <body>
   <h2>Conteo de cables en BIN</h2>
+  <h4>Multiplicación de medida × cantidad / 1000</h4>
 
-  <input type="number" id="medida" placeholder="Ingresa la medida del cable (Últimos 3 dígitos del NP)" />
-  <input type="number" id="piezas" placeholder="Ingresa la cantidad de piezas que muestra la báscula" />
+  <label>Medida del cable (últimos 3 dígitos del NP):
+    <input type="number" id="medida" placeholder="Ej. 254" />
+  </label>
+
+  <label>Cantidad de piezas que muestra la báscula:
+    <input type="number" id="piezas" placeholder="Ej. 620" />
+  </label>
 
   <button onclick="calcular()">Calcular</button>
 
-  <div id="resultado"></div>
-  <div id="mensajeFinal"></div>
+  <p id="resultado"></p>
+  <p id="mensajeFinal"></p>
+
   <script>
     function calcular() {
       const medida = parseFloat(document.getElementById('medida').value);
       const piezas = parseFloat(document.getElementById('piezas').value);
+      const resultadoDiv = document.getElementById('resultado');
       const mensajeFinal = document.getElementById('mensajeFinal');
+
       if (isNaN(medida) || isNaN(piezas)) {
-        document.getElementById('resultado').textContent = "Por favor, ingresa números válidos.";
+        resultadoDiv.textContent = "Por favor, ingresa números válidos.";
+        mensajeFinal.textContent = "";
         return;
       }
 
       const resultado = (medida * piezas) / 1000;
-      document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
-       mensajeFinal.textContent = "Esta es la cantidad de cable en metros(UOM)";
+      resultadoDiv.textContent = `Resultado: ${resultado}`;
+      mensajeFinal.textContent = "Esta es la cantidad de cable en metros (UOM).";
     }
   </script>
 </body>
