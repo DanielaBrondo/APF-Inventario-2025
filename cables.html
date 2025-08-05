@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Conteo de cables en BIN</title>
+  <title>Conteo de cables con NP terminación 00 </title>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -83,15 +83,11 @@
   </style>
 </head>
 <body>
-  <h2>Conteo de cables en BIN</h2>
+  <h2>Conteo de cables con NP terminación 00 </h2>
   <h4>Método de conteo en Báscula</h4>
 
-  <label for="medida">Medida del cable (últimos 3 dígitos del NP):</label>
-  <input type="number" id="medida" placeholder="Ej. 45" />
-
-  <label for="piezas">Cantidad de piezas que muestra la báscula:</label>
-  <input type="number" id="piezas" placeholder="Ej. 1500" />
-
+  <label for="peso">Peso del cable en KG (si está en bin hay que restar el peso de la tara)</label>
+  <input type="number" id="peso" />
   <button onclick="calcular()">Calcular</button>
 
   <p id="resultado"></p>
@@ -99,20 +95,19 @@
 
   <script>
     function calcular() {
-      const medida = parseFloat(document.getElementById('medida').value);
-      const piezas = parseFloat(document.getElementById('piezas').value);
+      const peso = parseFloat(document.getElementById('peso').value);
       const resultadoDiv = document.getElementById('resultado');
       const mensajeFinal = document.getElementById('mensajeFinal');
 
-      if (isNaN(medida) || isNaN(piezas)) {
+      if (isNaN(peso)) {
         resultadoDiv.textContent = "Por favor, ingresa números válidos.";
         mensajeFinal.textContent = "";
         return;
       }
 
-      const resultado = Math.round((medida * piezas) / 1000);
+      const resultado = Math.round((peso) / 0.011);
       resultadoDiv.textContent = `Resultado: ${resultado}`;
-      mensajeFinal.textContent = "Esta es la cantidad de cable en milímetros (UOM).";
+      mensajeFinal.textContent = "Esta es la cantidad a registrar en el TAG en Metros (UOM).";
     }
   </script>
 </body>
